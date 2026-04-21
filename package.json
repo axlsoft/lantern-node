@@ -1,0 +1,14 @@
+{
+  "name": "lantern-node",
+  "private": true,
+  "packageManager": "pnpm@10.0.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "echo build placeholder",
+    "lint": "echo lint placeholder",
+    "typecheck": "echo typecheck placeholder",
+    "test": "echo test placeholder"
+  }
+}
