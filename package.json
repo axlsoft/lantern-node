@@ -1,14 +1,31 @@
 {
   "name": "lantern-node",
   "private": true,
-  "packageManager": "pnpm@10.0.0",
+  "type": "module",
+  "packageManager": "pnpm@10.33.0",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
-    "build": "echo build placeholder",
-    "lint": "echo lint placeholder",
-    "typecheck": "echo typecheck placeholder",
-    "test": "echo test placeholder"
+    "build": "pnpm -r --filter './packages/*' build",
+    "lint": "eslint packages",
+    "typecheck": "pnpm -r --filter './packages/*' typecheck",
+    "test": "pnpm -r --filter './packages/*' test",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.9.0"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }
