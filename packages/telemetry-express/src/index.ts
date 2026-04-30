@@ -1,2 +1,1 @@
-// Express adapter for Lantern telemetry — implementation begins in Phase 1.5
-export {};
+export { lantern } from "./middleware.js";
